@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Space+Mono">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-width">
+      <div class="logo-wrapper">
+        <img src="../images/logo.svg" alt="" />
+      </div>
+      <div class="calculator-wrapper">
+        <div class="col-one-half">
+          <div class="form-wrapper">
+            <div class="input-group">
+              <label for="bill">Bill</label>
+              <div class="input-logo">
+                <input type="text" id="bill" value="0.00" />
+                <span class="icon">
+                  <img src="./images/icon-dollar.svg" alt="" />
+                </span>
+              </div>
+            </div>
+            <div class="buttons-group">
+              <label>Select Tip %</label>
+              <div class="buttons-wrapper">
+                <div class="button-wrapper">
+                  <input type="radio" value="5%" id="5" name="tip">
+                  <label for="5"><span>5%</span></label>
+                </div>
+                <div class="button-wrapper">
+                  <input type="radio" value="10%" id="10" name="tip">
+                  <label for="10"><span>10%</span></label>
+                </div>
+                <div class="button-wrapper">
+                  <input type="radio" value="15%" id="15" name="tip">
+                  <label for="15"><span>15%</span></label>
+                </div>
+                <div class="button-wrapper">
+                  <input type="radio" value="20%" id="20" name="tip">
+                  <label for="20"><span>20%</span></label>
+                </div>
+                <div class="button-wrapper">
+                  <input type="radio" value="50%" id="50" name="tip">
+                  <label for="50"><span>50%</span></label>
+                </div>
+                <div class="button-wrapper button-wrapper-custom">
+                  <input type="radio" value="custom" id="custom" name="tip">
+                  <label for="custom"><span>Custom
+                      
+                    </span>
+                  </label>
+                  <input type="text" name="custom-tip" value="0" class="custom-tip">
+
+                </div>
+                <!--
+                <button type="button" class="btn">5%</button>
+                <button type="button" class="btn">10%</button>
+                <button type="button" class="btn">15%</button>
+                <button type="button" class="btn">20%</button>
+                <button type="button" class="btn">50%</button>
+                -->
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="people">Number of People</label>
+              <div class="input-logo">
+                <input type="text" id="people" value="0" />
+                <span class="icon">
+                  <img src="./images/icon-person.svg" alt="" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-one-half">
+          <div class="wrapper-results">
+            <div class="result">
+              <div class="content">
+                <p>Tip Amount</p>
+                <small>/ person</small>
+              </div>
+              <div class="price">
+                <span id="tipTotal">$0.00</span>
+              </div>
+            </div>
+            <div class="result">
+              <div class="content">
+                <p>Tip Amount</p>
+                <small>/ person</small>
+              </div>
+              <div class="price">
+                <span id="total">$0.00</span>
+              </div>
+            </div>
+            <div class="button-wrapper">
+              <button type="button" class="btn-reset">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
