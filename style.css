@@ -20,7 +20,7 @@
   align-items: center;
 }
 .col-one-half {
-  flex: 0 0 calc(50% - 1rem);
+  flex: 1 0 calc(50% - 1rem);
   width: 100%;
   height: auto;
 }
