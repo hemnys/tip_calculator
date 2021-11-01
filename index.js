@@ -14,7 +14,8 @@ const toggleWarning = (status) => {
     ? $warning.classList.remove("hidden")
     : $warning.classList.add("hidden");
 };
-const cleanForm = () => {
+const cleanForm = (evt) => {
+  evt.target.setAttribute("disabled", true);
   const form = document.getElementById("form");
   const items = [...form.querySelectorAll("input")];
   items.forEach((item) => {
