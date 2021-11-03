@@ -20,9 +20,7 @@
   align-items: center;
 }
 .col-one-half {
-  flex: 1 0 calc(50% - 1rem);
-  width: 100%;
-  height: auto;
+  grid-column: span 1;
 }
 .logo-wrapper {
   margin-bottom: 2rem;
@@ -31,13 +29,12 @@
   background-color: #ffff;
   border-radius: 1rem;
   max-width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-wrap: wrap;
   box-shadow: #0000002e 0px 0px 15px 0px;
   padding: 2rem;
-  gap: 2rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
 }
 .input-group {
   display: block;
@@ -81,11 +78,12 @@
 }
 .buttons-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: 1rem;
 }
 .buttons-wrapper .button-wrapper {
   display: inline-block;
+  grid-column: span 4;
 }
 .button-wrapper input[type="radio"] {
   display: none;
@@ -179,7 +177,7 @@
 .hidden {
   display: none;
 }
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 768px) {
   .container {
     align-items: end;
   }
@@ -188,16 +186,16 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .col-one-half {
-    flex: 0 1 100%;
-  }
-  .buttons-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+  .buttons-wrapper .button-wrapper {
+    grid-column: span 6;
   }
   .form-wrapper {
     padding: 0;
   }
   .price {
     font-size: 2rem;
+  }
+  .col-one-half {
+    grid-column: span 2;
   }
 }
