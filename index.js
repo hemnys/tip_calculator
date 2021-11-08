@@ -10,9 +10,11 @@ const updateTotals = ({ partialTip, totalTip }) => {
 };
 const toggleWarning = (status) => {
   const $warning = document.querySelector(".warning");
+  const $wrapper = $warning.closest(".input-group");
+  console.log(status);
   status
-    ? $warning.classList.remove("hidden")
-    : $warning.classList.add("hidden");
+    ? $wrapper.classList.add("enable-warning")
+    : $wrapper.classList.remove("enable-warning");
 };
 const cleanForm = (evt) => {
   evt.target.setAttribute("disabled", true);
